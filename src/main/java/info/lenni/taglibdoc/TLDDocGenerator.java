@@ -681,9 +681,10 @@ public class TLDDocGenerator {
                         println( "Parsing tag file: " + path );
                         TagFile tagFile = TagFile.parse( tagFileIn );
                         List<Directive> directives = tagFile.getDirectives();
+                        
                         for( int j = 0; j < directives.size(); j++ ) {
                             Directive directive = 
-                                (Directive)directives.get( j );
+                                directives.get( j );
                             String name = directive.getDirectiveName();
                             if( name.equals( "tag" ) ) {
                                 populateTagFileDetailsTagDirective( 
