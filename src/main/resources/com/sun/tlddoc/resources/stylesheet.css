@@ -1,60 +1,105 @@
-/* Javadoc style sheet */
-
-/*
- * <license>
- * Copyright (c) 2003-2004, Sun Microsystems, Inc.
- * All rights reserved.
+/* Javadoc style sheet 
  * 
- * Redistribution and use in source and binary forms, with or without 
- * modification, are permitted provided that the following conditions are met:
- * 
- *     * Redistributions of source code must retain the above copyright 
- *       notice, this list of conditions and the following disclaimer.
- *     * Redistributions in binary form must reproduce the above copyright 
- *       notice, this list of conditions and the following disclaimer in the
- *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of Sun Microsystems, Inc. nor the names of its 
- *       contributors may be used to endorse or promote products derived from
- *       this software without specific prior written permission.
- * 
- * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 
- * "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED
- * TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A 
- * PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
- * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
- * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
- * ROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
- * PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF
- * LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
- * NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
- * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- * </license>
+ * taken from JBoss: http://community.jboss.org/wiki/JBossorgStylesheetsforJavadocandJXRxrefreports
  */
 
 /* Define colors, fonts and other style attributes here to override the defaults */
 
-/* Page background color */
-body { background-color: #FFFFFF }
 
-/* Table colors */
-.TableHeadingColor     { background: #CCCCFF } /* Dark mauve */
+
+/* Page background color */
+body {
+	background-color: #FFFFFF;
+	background-image:url(resources/bkg_gradient.gif);
+	background-repeat: repeat-x;
+	margin:0 auto;
+	font-family:'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
+	font-size:12px;
+	padding:0em 2em;
+	color:#333;
+
+ }
+
+/* Common elements */
+
+font {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-weight: inherit; }
+
+hr { display: none; }
+
+a:link { color:#0066cc; }
+a:visited { color:#8b5caf; }
+a:hover { color:#6699cc; }
+
+
+/* Headings */
+h1 {
+	font-size: 145%;
+	background-image:url(resources/h1_hdr.png);
+	background-repeat:no-repeat;
+	border-top:1px dotted #CCCCCC;
+	line-height:1.2em;
+	color:#182737;
+	font-size:2em;
+	padding:1.5em;
+	margin-top: 0px;
+	text-align:left;
+}
+
+
+/* Default Table elements and colors */
+
+th, table { border-collapse:collapse;border-color: #E6E7E8; }
+
+
+.TableHeadingColor     {
+	background:#000000 url(resources/bkg_blkheader.png) repeat-x scroll left top;
+	color:#FFFFFF;
+	font-size:12px;
+	font-weight:bold;
+	height:31px;
+	text-align:left;
+	padding:1.5em;
+}
+
+.TableHeadingColor th {
+	padding-left: 10px;
+}
+
+
 .TableSubHeadingColor  { background: #EEEEFF } /* Light mauve */
-.TableRowColor         { background: #FFFFFF } /* White */
+.TableRowColor { background: #FFFFFF; border-color: #E6E7E8;}
+.TableRowColor td { line-height: 175%; padding-left: 10px;}
 
 /* Font used in left-hand frame lists */
-.FrameTitleFont   { font-size: 10pts; font-family: Helvetica, Arial, san-serif }
-.FrameHeadingFont { font-size: 10pts; font-family: Helvetica, Arial, san-serif }
-.FrameItemFont    { font-size: 10pts; font-family: Helvetica, Arial, san-serif }
-
-/* Example of smaller, sans-serif font in frames */
-/* .FrameItemFont  { font-size: 10pt; font-family: Helvetica, Arial, sans-serif } */
+.FrameTitleFont   { font-size: 125%; font-family: Helvetica, Arial, sans-serif; font-weight: bold; margin-top: 1em; display: block; }
+.FrameHeadingFont { font-size: 125%; font-family: 'Lucida Grande', Geneva, Verdana, Arial, sans-serif; font-weight: bold; margin-top: 1em; display: block;  }
+.FrameItemFont    { font-size: 100%; font-family: Helvetica, Arial, sans-serif }
 
 /* Navigation bar fonts and colors */
-.NavBarCell1    { background-color:#EEEEFF;}/* Light mauve */
-.NavBarCell1Rev { background-color:#00008B;}/* Dark Blue */
-.NavBarFont1    { font-family: Arial, Helvetica, sans-serif; color:#000000;}
-.NavBarFont1Rev { font-family: Arial, Helvetica, sans-serif; color:#FFFFFF;}
 
-.NavBarCell2    { font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
-.NavBarCell3    { font-family: Arial, Helvetica, sans-serif; background-color:#FFFFFF;}
+.NavBarCell1    { background-color: #ffffff;
+	background-image:url(resources/bkgheader.png);
+	background-repeat: repeat-x scroll left top;
+	line-height:2em;
+	padding-left:6px;
+	padding-right:6px;
+}
+
+.NavBarFont1 {
+	color: white;
+}
+.NavBarCell1 a {
+	color: white;
+}
+
+.NavBarCell1Rev { background-color:#FFFFFF; padding-left:6px; padding-right:6px;}
+.NavBarFont1    { color:#FFFFFF;}
+.NavBarFont1Rev { color:#243446;}
+
+.NavBarCell2    { background-color:#FFFFFF;}
+.NavBarCell3    { background-color:#FFFFFF;}
 
