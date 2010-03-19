@@ -10,7 +10,7 @@
 /* Page background color */
 body {
 	background-color: #FFFFFF;
-	background-image:url(resources/bkg_gradient.gif);
+	background-image:url(bkg_gradient.gif);
 	background-repeat: repeat-x;
 	margin:0 auto;
 	font-family:'Lucida Grande', Geneva, Verdana, Arial, sans-serif;
@@ -38,7 +38,7 @@ a:hover { color:#6699cc; }
 /* Headings */
 h1 {
 	font-size: 145%;
-	background-image:url(resources/h1_hdr.png);
+	background-image:url(h1_hdr.png);
 	background-repeat:no-repeat;
 	border-top:1px dotted #CCCCCC;
 	line-height:1.2em;
@@ -56,7 +56,7 @@ th, table { border-collapse:collapse;border-color: #E6E7E8; }
 
 
 .TableHeadingColor     {
-	background:#000000 url(resources/bkg_blkheader.png) repeat-x scroll left top;
+	background:#000000 url(bkg_blkheader.png) repeat-x scroll left top;
 	color:#FFFFFF;
 	font-size:12px;
 	font-weight:bold;
@@ -82,7 +82,7 @@ th, table { border-collapse:collapse;border-color: #E6E7E8; }
 /* Navigation bar fonts and colors */
 
 .NavBarCell1    { background-color: #ffffff;
-	background-image:url(resources/bkgheader.png);
+	background-image:url(bkgheader.png);
 	background-repeat: repeat-x scroll left top;
 	line-height:2em;
 	padding-left:6px;

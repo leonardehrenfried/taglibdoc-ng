@@ -38,7 +38,8 @@ import java.util.List;
 /**
  * Encapsulates a directive in a tag file.
  *
- * @author  mroth
+ * @author mroth
+ * @maintainer lehrenfried
  */
 public class Directive {
   
@@ -46,7 +47,7 @@ public class Directive {
     private String directiveName;
     
     /** The attributes for this directive. */
-    private List attributes = new ArrayList();
+    private List<Attribute> attributes = new ArrayList<Attribute>();
     
     /** Creates a new instance of Directive */
     public Directive() {
@@ -78,7 +79,7 @@ public class Directive {
     /**
      * Returns an iterator through the set of attributes in this directive.
      */
-    public Iterator getAttributes() {
+    public Iterator<Attribute> getAttributes() {
         return this.attributes.iterator();
     }
     

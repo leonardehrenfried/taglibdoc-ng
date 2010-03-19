@@ -83,6 +83,7 @@ import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
  * input tag libraries.
  *
  * @author Mark Roth
+ * @maintainer Lenni
  */
 public class TLDDocGenerator {
 
@@ -90,7 +91,7 @@ public class TLDDocGenerator {
      * The set of tag libraries we are parsing.  
      * Each element is a TagLibrary instance. 
      */
-    private ArrayList tagLibraries = new ArrayList();
+    private ArrayList<TagLibrary> tagLibraries = new ArrayList<TagLibrary>();
 
     /** 
      * The directory containing the stylesheets, or null if the 
@@ -472,6 +473,15 @@ public class TLDDocGenerator {
     {
         copyResourceToFile( new File( this.outputDirectory, "stylesheet.css" ), 
             RESOURCE_PATH + "/stylesheet.css" );
+        copyResourceToFile( new File( this.outputDirectory, "bkg_blkheader.png" ), 
+                RESOURCE_PATH + "/img/bkg_blkheader.png" );
+        copyResourceToFile( new File( this.outputDirectory, "bkg_gradient.gif" ), 
+                RESOURCE_PATH + "/img/bkg_gradient.gif" );
+        copyResourceToFile( new File( this.outputDirectory, "bkgheader.png" ), 
+                RESOURCE_PATH + "/img/bkgheader.png" );
+        copyResourceToFile( new File( this.outputDirectory, "h1_hdr.png" ), 
+                RESOURCE_PATH + "/img/h1_hdr.png" );
+        
     }
     
     /**
@@ -733,7 +743,7 @@ public class TLDDocGenerator {
     private void populateTagFileDetailsTagDirective( 
         Element tagFileNode, Document doc, Directive directive )
     {
-        Iterator attributes = directive.getAttributes();
+        Iterator<Attribute> attributes = directive.getAttributes();
         while( attributes.hasNext() ) {
             Attribute attribute = (Attribute)attributes.next();
             String name = attribute.getName();
@@ -819,7 +829,7 @@ public class TLDDocGenerator {
     private void populateTagFileDetailsAttributeDirective( 
         Element tagFileNode, Document doc, Directive directive )
     {
-        Iterator attributes = directive.getAttributes();
+        Iterator<Attribute> attributes = directive.getAttributes();
         Element attributeNode = doc.createElementNS( Constants.NS_JAVAEE, 
             "attribute" );
         tagFileNode.appendChild( attributeNode );
@@ -903,7 +913,7 @@ public class TLDDocGenerator {
     private void populateTagFileDetailsVariableDirective( 
         Element tagFileNode, Document doc, Directive directive )
     {
-        Iterator attributes = directive.getAttributes();
+        Iterator<Attribute> attributes = directive.getAttributes();
         Element variableNode = doc.createElementNS( Constants.NS_JAVAEE, 
             "variable" );
         tagFileNode.appendChild( variableNode );
