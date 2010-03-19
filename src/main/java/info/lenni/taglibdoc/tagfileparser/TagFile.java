@@ -23,10 +23,11 @@ public class TagFile {
     private static final String JSP_NS = "http://java.sun.com/JSP/Page";
     // attributes to be read from the <jsp:directive.attribute/> tags
     private static final String[] ATTRIBUTE_ATTRS = { "name", "description",
-            "required" };
+            "required", "rtexprvalue" };
     // attributes to be read from the <jsp:directive.tag/> tags
     private static final String[] TAG_ATTRS = { "name", "description",
-            "required" };
+            "required", "example", "display-name", "import",
+            "dynamic-attributes"  };
 
     private List<Directive> directives = new ArrayList<Directive>();
 
