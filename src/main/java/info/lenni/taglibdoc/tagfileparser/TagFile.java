@@ -52,7 +52,6 @@ public class TagFile {
                     TAG_ATTRS);
             tagfile.addDirectives(tags);
 
-            System.out.println(tagfile);
             return tagfile;
 
         } catch (ParserConfigurationException e) {

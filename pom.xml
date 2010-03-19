@@ -4,9 +4,21 @@
 	<groupId>info.lenni</groupId>
 	<artifactId>taglibdoc-ng</artifactId>
 	<name>JSP Tag Library Documentation Generator</name>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 
 	<packaging>jar</packaging>
+
+	<developers>
+		<developer>
+			<id>lenni</id>
+			<name>Lenni</name>
+			<email>leonard.ehrenfried@web.de</email>
+			<url>http://lenni.info</url>
+			<roles>
+				<role>maintainer</role>
+			</roles>
+		</developer>
+	</developers>
 
 	<build>
 		<plugins>
