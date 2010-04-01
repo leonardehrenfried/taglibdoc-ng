@@ -23,7 +23,7 @@ public class TagFile {
     private static final String JSP_NS = "http://java.sun.com/JSP/Page";
     // attributes to be read from the <jsp:directive.attribute/> tags
     private static final String[] ATTRIBUTE_ATTRS = { "name", "description",
-            "required", "rtexprvalue" };
+            "required", "rtexprvalue" , "fragment"};
     // attributes to be read from the <jsp:directive.tag/> tags
     private static final String[] TAG_ATTRS = { "name", "description",
             "required", "example", "display-name", "import",
