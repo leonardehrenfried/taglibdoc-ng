@@ -4,6 +4,8 @@ A tool for generating JavaDoc-style documenation for JSP Tag Libraries.
 
 [[http://www.flickr.com/photos/24003367@N00/4445500928/|{{http://farm3.static.flickr.com/2704/4445500928_28bb98d502.jpg|Taglibdoc-ng Screenshot}}]]
 
+{{http://farm3.static.flickr.com/2704/4445500928_28bb98d502.jpg|Taglibdoc-ng Screenshot}}
+
 This almost is the same as the [[https://taglibrarydoc.dev.java.net/|Sun version]] but with a few changes:
 
 * it has some bugfixes, namely it now uses the correct encoding when processing non-ANSI characters
